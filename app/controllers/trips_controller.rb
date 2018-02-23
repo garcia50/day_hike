@@ -4,7 +4,7 @@ class TripsController < ApplicationController
     @trips = Trip.all
   end
 
-  def shoe
+  def show
     @trip = Trip.find(params[:id])
   end
 end
