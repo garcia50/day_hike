@@ -3,3 +3,25 @@
 <%= @trip.name %>
 <%= @trip.start_date %>
 <%= @trip.end_date %>
+<br>
+<br>
+
+<h3>Trails:</h3>
+<% @trip.trails.each do |trail| %>
+  Name: <%= trail.name %> 
+  <br>
+  Length: <%= trail.length %> 
+  <br>
+  Address: <%= trail.address %> 
+  <br>
+  <br>
+<% end %>
+
+Total Distance:
+<%= @trip.trails.total_hiking_distance %> 
+<br>
+Average Distance: 
+<%= @trip.trails.average_hiking_disatnce %>
+<br>
+Longest hiking distance
+<%= @trip.trails.max_trip %>
